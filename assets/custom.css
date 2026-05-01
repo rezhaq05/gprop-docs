@@ -1,0 +1,6 @@
+/* top-left logo in nav bar */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 100px;   /* default is 24px — increase this */
+  width: auto;
+}
