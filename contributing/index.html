@@ -1003,17 +1003,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#rezoan-haque-rashid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rezoan Haque Rashid
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1071,23 +1060,13 @@
 <hr />
 <h2 id="project-team">Project Team</h2>
 <h3 id="alvi-rashid">Alvi Rashid</h3>
-<p><strong>Role:</strong> Project Supervisor &amp; Research Lead</p>
+<p><strong>Role:</strong> Documentation, Multithreading &amp; Benchmarking<br />
+<strong>Program:</strong> Electrical Engineering, Sophomore</p>
 <ul>
-<li>Provided the research direction and problem definition for the RF propagation modelling system</li>
-<li>Supervised the design and validation of the digital twin pipeline</li>
-<li>Guided the selection of propagation models including FSPL, log-distance, and knife-edge diffraction</li>
-</ul>
-<hr />
-<h3 id="rezoan-haque-rashid">Rezoan Haque Rashid</h3>
-<p><strong>Role:</strong> Lead Developer</p>
-<ul>
-<li>Designed and implemented the full end-to-end pipeline from LiDAR data acquisition to Google Earth KMZ output</li>
-<li>Built the C/C++ preprocessing binary (<code>preproc</code>) — RANSAC plane segmentation, Euclidean tree clustering, KD-tree spatial indexing</li>
-<li>Built the C propagation binary (<code>prop</code>) — knife-edge diffraction, tile-based digital twin, multi-transmitter heatmap generation</li>
-<li>Developed the Python pipeline — <code>fetch.py</code>, <code>gui.py</code>, <code>3DHeatMap.py</code></li>
-<li>Conducted static performance analysis identifying critical bottlenecks and projected 14× speedup in preprocessing</li>
-<li>Benchmarked the full system over 20 runs across 1–10 cores using OpenMP parallelisation</li>
-<li>Authored this documentation</li>
+<li>Authored the full project documentation including pipeline flowcharts, file format specifications, algorithm references, and CLI guides — deployed via MkDocs Material to GitHub Pages</li>
+<li>Implemented OpenMP multithreading on the <code>prop</code> heatmap grid loop, achieving a 4.3× speedup at 10 cores compared to the single-threaded baseline (18.4s → 4.1s)</li>
+<li>Designed and ran the benchmarking suite — 20 runs across 1, 2, 4, 8, and 10 cores — capturing min, max, mean, median, stdev, and p95 statistics per configuration</li>
+<li>Built the benchmark reporting pipeline (<code>benchmark.py</code>, <code>plot_histogram.py</code>, <code>plot_cores.py</code>) generating interactive HTML reports with per-core timing analysis and normalised CPU time</li>
 </ul>
 <hr />
 <h2 id="acknowledgements">Acknowledgements</h2>
